@@ -1,0 +1,141 @@
+{
+  "student_metadata": {
+    "name": "[Your Full Name]",
+    "roll_number": "[Your Roll Number]",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part A",
+    "submission_date": "2026-03-01"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Gemini",
+      "model": "Gemini 1.5 Pro",
+      "provider": "Google"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-01",
+      "tool_name": "Gemini",
+      "model": "Gemini 1.5 Pro",
+      "purpose": "Initial paper screening based on exam constraints",
+      "prompt": "i want you to help me select the best easy paper based on difficulty level and uniqueness, but first this is the set of instruction want you to go through and then after that, I will give you another PDF , what is specifically part A",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Summarized the strict constraints of Part A, ensuring I understood the timeline and core requirements.",
+      "student_verification": "Cross-checked the response with the provided Midsem Instructions PDF to confirm the 2008-2013 timeline and allowed topics.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-01",
+      "tool_name": "Gemini",
+      "model": "Gemini 1.5 Pro",
+      "purpose": "Finding a paper after providing the detailed Part A rubric",
+      "prompt": "find me a paper after reading the pdf",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Suggested initial options like 'Convergence of the EM Algorithm' and 'Locally Linear SVMs'.",
+      "student_verification": "Verified that the suggested papers fell within the 2009-2012 CORE A* criteria.",
+      "confidence_level": 4
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-01",
+      "tool_name": "Gemini",
+      "model": "Gemini 1.5 Pro",
+      "purpose": "Filtering out papers that were already selected by other students",
+      "prompt": "these paper are done !!! we don want any same paper selection",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Pivoted the search to find a unique, unselected paper to avoid the strict duplication penalty.",
+      "student_verification": "Checked the live Google Sheet to confirm the newly suggested paper was not on the list.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 4,
+      "date": "2026-03-01",
+      "tool_name": "Gemini",
+      "model": "Gemini 1.5 Pro",
+      "purpose": "Evaluating the difficulty and feasibility of specific candidate papers",
+      "prompt": "Since you have read pdf containing all the constraint, and the difficulty to be faced after selecting our paper.. which is easier in between these ? 1.Paper: 'Support Vector Machines as Probabilistic Models' ... 2. 'A Kernel Two-Sample Test' ... 3. 'Laplacian Support Vector Machines Trained in the Primal'",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Provided a crucial comparative analysis of implementation difficulty, highlighting the risks of complex mathematical proofs vs standard library compatibility.",
+      "student_verification": "Reviewed the methods of Laplacian SVMs and MMD to confirm they would be too difficult to implement from scratch on a CPU.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 5,
+      "date": "2026-03-01",
+      "tool_name": "Gemini",
+      "model": "Gemini 1.5 Pro",
+      "purpose": "Finding an immediate replacement after the previous paper was taken",
+      "prompt": "sorry but the updated list already has ... Support Vector Machines as Probabilistic Models",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Suggested 'Pegasos: Primal Estimated sub-GrAdient SOlver for SVM' as a highly viable, CPU-friendly alternative.",
+      "student_verification": "Checked JMLR 2011 to ensure the venue and year were valid, and confirmed Pegasos was not on the live tracking sheet.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 6,
+      "date": "2026-03-01",
+      "tool_name": "Gemini",
+      "model": "Gemini 1.5 Pro",
+      "purpose": "Final validation of the Pegasos paper against the strict grading rubric",
+      "prompt": "is this easy and falls under the rule and constraint of the pdf",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Confirmed that the Pegasos paper solves SVMs using SGD, making it computationally lightweight and easy to defend in Part C.",
+      "student_verification": "Read the abstract of the Pegasos paper to verify that the core contribution is an SGD optimization algorithm.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 7,
+      "date": "2026-03-01",
+      "tool_name": "Gemini",
+      "model": "Gemini 1.5 Pro",
+      "purpose": "Clarifying dataset and compute dependencies for the Google Form submission",
+      "prompt": "Does the paper require any of the following? * Special approval / restricted access dataset Proprietary / industry data Medical / clinical data Heavy compute (GPU / cluster) None of the above",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Clarified that Pegasos relies on standard optimization logic and runs efficiently on standard CPUs without restricted data.",
+      "student_verification": "Verified that SGD does not require heavy GPU compute and can be tested on synthetic datasets.",
+      "confidence_level": 5
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 4,
+      "prompt": "Since you have read pdf containing all the constraint, and the difficulty to be faced after selecting our paper.. which is easier in between these ? 1.Paper: 'Support Vector Machines as Probabilistic Models' ... 2. 'A Kernel Two-Sample Test' ... 3. 'Laplacian Support Vector Machines Trained in the Primal'",
+      "why_important": "This was the most critical prompt because it helped me avoid papers that seemed interesting but would be a nightmare to code from scratch (like Laplacian SVMs). It focused my selection entirely on reproduction feasibility."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 5,
+      "prompt": "sorry but the updated list already has ... Support Vector Machines as Probabilistic Models",
+      "why_important": "When my chosen paper was taken, this prompt allowed me to quickly pivot to a structurally similar alternative (Pegasos) without compromising on the compute and reproducibility constraints."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 6,
+      "prompt": "is this easy and falls under the rule and constraint of the pdf",
+      "why_important": "This helped me validate that the Pegasos paper's use of Stochastic Gradient Descent strictly fit the rule forbidding heavy compute, ensuring it would run on my local laptop."
+    },
+    {
+      "rank": 4,
+      "interaction_id": 7,
+      "prompt": "Does the paper require any of the following? * Special approval / restricted access dataset Proprietary / industry data Medical / clinical data Heavy compute (GPU / cluster) None of the above",
+      "why_important": "This directly addressed a major trap in the exam instructions (restricted datasets). It confirmed that I could reproduce the paper's findings using standard open-source or toy datasets."
+    },
+    {
+      "rank": 5,
+      "interaction_id": 3,
+      "prompt": "these paper are done !!! we don want any same paper selection",
+      "why_important": "This prompt saved me from an automatic disqualification by strictly filtering out papers that were already claimed on the live sheet."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Part A.",
+    "understanding_acknowledged": true,
+    "signature": "[Your Full Name]",
+    "date": "2026-03-01"
+  }
+}
