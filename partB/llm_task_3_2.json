@@ -1,0 +1,47 @@
+{
+  "student_metadata": {
+    "name": "Belal Raza",
+    "roll_number": "230094",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-12"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Antigravity Agent",
+      "model": "Gemini 2.5 Pro",
+      "provider": "Google"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-12",
+      "tool_name": "Antigravity",
+      "model": "Gemini 2.5 Pro",
+      "purpose": "Assistance with structuring Task 3.2",
+      "prompt": "Please help me format the markdown and code blocks for Task 3.2 effectively.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped lay down the foundational boilerplate and markdown structuring for the notebook.",
+      "student_verification": "I carefully verified that the explanations and code logic actually met the rubric requirements before submitting.",
+      "confidence_level": 5,
+      "task_tag": "Task 3.2",
+      "code_used_verbatim": false
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "Please help me format the markdown and code blocks for Task 3.2 effectively.",
+      "why_important": "Streamlined the mechanical formatting process, allowing me to focus on the technical analysis required for Task 3.2."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Part B. The LLM was used strictly for reading comprehension, debugging, and initial writing assistance. The critical analytical choices (ablations, failure modes, interpretations) represent my own understanding.",
+    "understanding_acknowledged": true,
+    "signature": "Belal Raza",
+    "date": "2026-03-12"
+  }
+}
